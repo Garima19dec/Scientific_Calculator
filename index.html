@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+<!-- ----------------calc----------------------------- -->
+
+<div class="container">
+        <div class="display">
+            <input id="screen" type="text" placeholder="0">
+        </div>
+
+        <div class="btns">
+            <div class="row">
+                <button type="button" id="ce" value="backspc" onclick="backspc()">CE</button>
+                <button type="button" class="btn" value="(" onclick="number(value)">(</button>
+                <button type="button" class="btn" value=")" onclick="number(value)">)</button>
+                <button type="button" class="btn" value="%" onclick="number(value)">%</button>
+                <button type="button" id="ac" value="AC" onclick="screen.value=''">AC</button>
+            </div>
+
+            <div class="row">
+                <button type="button" value="sin" onclick="sin()">sin</button>
+                <button type="button" class="btn" value="7" onclick="number(value)">7</button>
+                <button type="button" class="btn" value="8" onclick="number(value)">8</button>
+                <button type="button" class="btn" value="9" onclick="number(value)">9</button>
+                <button type="button" value="pi" onclick="pi()">π</button>
+            </div>
+
+            <div class="row">
+                <button type="button" value="cos" onclick="cos()">cos</button>
+                <button type="button" value="4" class="btn" onclick="number(value)">4</button>
+                <button type="button" value="5" class="btn" onclick="number(value)">5</button>
+                <button type="button" value="6" class="btn" onclick="number(value)">6</button>
+                <button type="button" value="*" class="btn" onclick="number(value)">*</button>
+            </div>
+
+            <div class="row">
+                <button type="button" value="tan" onclick="tan()">tan</button>
+                <button type="button" value="1" class="btn" onclick="number(value)">1</button>
+                <button type="button" value="2" class="btn" onclick="number(value)">2</button>
+                <button type="button" value="3" class="btn" onclick="number(value)">3</button>
+                <button type="button" value="-" class="btn" onclick="number(value)">-</button>
+            </div>
+
+            <div class="row">
+                <button type="button" value="=" id="eval" onclick="equal()">=</button>
+                <button type="button" value="0" class="btn" onclick="number(value)">0</button>
+                <button type="button" value="." class="btn" onclick="number(value)">.</button>
+                <button type="button" value="+" class="btn" onclick="number(value)">+</button>
+                <button type="button" value="/" class="btn" onclick="number(value)">/</button>
+            </div>
+
+            <div class="row">
+                <button type="button" value="hist" class="btn" id="his" onclick="hist()">
+                    History
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="history">
+      <h3>History:<br> 
+      </h3>
+      <ul>
+        <div class="message"></div>
+        <!-- <body onload="javascript:hist()" > -->
+           <!-- function hist(historyArray) -->
+      </ul>
+    </div>
+    <script src="index.js" type="text/javascript" language="JavaScript">
+    // function hist(historyArray);
+    </script>
+  </body>
+  
+</html>
